@@ -8,7 +8,9 @@ _**Mobility of condensin DC is key to its function in repressing transcription**
 
  
 Laura Breimann *, Ana Karina Morao *, Jun Kim, David Sebastian Jimenez, Nina Maryn, Krishna Bikkasani, Michael J Carrozza, Sarah E Albritton, Maxwell Kramer, Lena Annika Street, Kustrim Cerimi, Vic-Fabienne Schumann, Ella Bahry, Stephan Preibisch, Andrew Woehler, Sevinç Ercan 
+
 bioRxiv:  ; doi: 
+
 \* equal contribution  
 
 
