@@ -19,7 +19,8 @@ bioRxiv:  ; doi:
 
 * _**1.	Abstract & Availability**_
 * _**2.	Download**_
-* _**3.	FRAP tutorial**_
+* _**3.	FRAP analysis tutorial**_
+* _**4.	RNA-seq  analysis tutorial**_
 
 <br />
 <br />
