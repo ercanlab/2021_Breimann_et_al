@@ -20,7 +20,7 @@ bioRxiv:  ; doi:
 * _**1.	Abstract**_
 * _**2.	Requirements FRAP Matlab analysis**_
 * _**3.	FRAP analysis tutorial**_
-* _**4.	RNA-seq  analysis tutorial**_
+* _**4.	RNA-seq  analysis**_
 
 <br />
 <br />
@@ -29,7 +29,7 @@ bioRxiv:  ; doi:
  
 ### 1.	Abstract 
 Abstract:
-Condensin is a multi-subunit SMC complex that binds to and compacts chromosomes. Unlike cohesin, regulators of condensin dynamics and function in vivo remain unclear. Here we addressed this question using C. elegans condensin DC, which specifically binds to and represses transcription of both X chromosomes in hermaphrodites for dosage compensation.  Mutants of several chromatin modifiers that increase and decrease H4K20me and H4K16ac on the X cause varying degrees of X chromosome derepression. We used fluorescence recovery after photobleaching (FRAP) to analyze how these mutations regulate condensin DC binding dynamics in vivo. We established the system using the SMC4 homolog DPY-27 and showed that a well-characterized ATPase mutation abolishes its binding as measured by FRAP and ChIP-seq. The greatest effect on condensin DC dynamics was in a null mutant of the H4K20me2 demethylase DPY-21, where the mobile fraction of the complex reduced from ~30% to 10%. Supporting a structural role for DPY-21, a catalytic mutant of dpy-21 did not regulate condensin DC mobility. Intriguingly, unlike FRAP, ChIP-seq and Hi-C detected little change in condensin DC binding and 3D DNA contacts in the dpy-21 null mutant. Together, our results suggest that DPY-21 has a non-catalytic role in regulating the dynamics of condensin DC binding, which is important for its function in transcription repression.
+Condensin is a multi-subunit SMC complex that binds to and compacts chromosomes. Unlike cohesin, in vivo regulators of condensin binding dynamics remain unclear. Here we addressed this question using C. elegans condensin DC, which specifically binds to and represses transcription of both X chromosomes in hermaphrodites for dosage compensation.  Mutants of several chromatin modifiers that regulate H4K20me and H4K16ac cause varying degrees of X chromosome derepression. We used fluorescence recovery after photobleaching (FRAP) to analyze how these modifiers regulate condensin DC binding dynamics in vivo. We established FRAP using the SMC4 homolog DPY-27 and showed that a well-characterized ATPase mutation abolishes its binding. The greatest effect on condensin DC dynamics was in a null mutant of the H4K20me2 demethylase DPY-21, where the mobile fraction of the complex reduced from ~30% to 10%. Supporting a structural role for DPY-21, a catalytic mutant of dpy-21 did not regulate condensin DC mobility. Intriguingly, unlike FRAP, ChIP-seq and Hi-C detected little change in condensin DC binding and 3D DNA contacts in the dpy-21 null mutant. Together, our results suggest that DPY-21 has a non-catalytic role in regulating the dynamics of condensin DC binding, which is important for its function in transcription repression.
  
 
 <br />
@@ -62,7 +62,7 @@ The following scripts have to be in the same folder as “FRAP_analysis.m”
 
 FRAP protocol: 
 
-Test dataset: 
+A FRAP dataset of a _C. elegans_ intestine nuclei can be found [here](https://github.com/ercanlab/2021_Breimann_et_al/tree/main/FRAP_analysis/Example_datasets )
 
 _**Step 1: Select the data for analysis**_
 
@@ -78,18 +78,22 @@ Next, you need to select the FRAP dataset you want to analyze. The Leica SP8 cre
 
 _**Step 2: Manually outline the cell nucleus**_
 
-To select only one nucleus for FRAP analysis, you can draw a ROI. For that, a window will open with a filtered post bleach image (mean of the first three images) and just start outlining the nucleus by clicking in the image. Once you are satisfied with the outline, double click in the middle of the selected ROI to accept it. 
+To select only one nucleus for FRAP analysis, you can draw a **ROI**. For that, a window will open with a filtered post bleach image (mean of the first three images) and just start outlining the nucleus by clicking in the image. Once you are satisfied with the outline, double click in the middle of the selected ROI to accept it. 
 
+<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/nuc.png" alt="C. elegans intestine cell" width="400">
 
+<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/filtered_nuc.png" alt="C. elegans intestine cell with ROI" width="400">
 
 _**Step 3: Automatically detect the bleach point**_
 
-The next step automatically detects the bleach-point by subtracting the mean of the first couple post bleach image from the mean of the last pre bleach images. A window will appear with the Pre bleach and Post bleach images and the difference between the two images. The lower row depicts the selected mask from the previous step (thresholded) and the mask for the bleach point based on Fdiff above. 
+The next step automatically detects the bleach-point by subtracting the mean of the first couple post-bleach image from the mean of the last pre-bleach images. A window will appear with the pre-bleach and post-bleach images and the difference between the two images. The lower row depicts the selected mask from the previous step (thresholded) and the mask for the bleach point based on Fdiff above. 
 
-At this point, there is the option to change the threshold for the bleach point selection. Simply press ```No``` in the second window and write a value between ```0-1``` in the ```command Window``` (the starting point is 0.6), and press enter. If you are happy with the bleachpoint detection, press ```Yes```. The displayed overview image is saved as ```_mask.tif``` to the previously selected output folder. 
+At this point, there is the option to change the threshold for the bleach point selection. Simply press ```No``` in the second window and write a value between ```0-1``` in the ```Command Window``` (the starting point is 0.6), and press enter. If you are happy with the bleachpoint detection, press ```Yes```. The displayed overview image is saved as ```_mask.tif``` to the previously selected output folder. 
 
 
+<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/mask.png" alt="Masks for the nuclei and bleachpoint" width="400">
 
+<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/bleachpoint.png" alt="Window to select the bleachpoint" width="400">
 
 _**Step 4: Inspect the results**_
 
@@ -97,14 +101,15 @@ The following steps are automatically executed and will save the results to the 
 
 For correction acquisition bleaching, the rest of the nucleus is used. The file ```_bleaching_correction.``` shows the detected acquisition bleaching in the nuclear mask region for all post bleach images. The bleaching is fitted and used to correct the background fluorescence as well as the recovery fluorescence. The last timepoint intensity of the pre bleach detection in the bleach point is set to 1 to achieve comparable datasets between different replicates. 
 
-
+<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_bleaching_correction.tif" alt="Plots for the correction of the acquisition bleaching" width="400">
 
 
 The fitted and normalized recovery curve is saved as ```_recovery.tif``` to the output folder. It displays the normalized fluorescence in the whole nucleus (red) and the bleach point recovery (black). The immobile and mobile fractions are displayed in the image, and the tau and t-half values from the fit of the curve. The fitting of the curve can only be changed directly in the code (Section 7). 
 
+<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_recovery.tif" alt="Plot for the FRAP recovery" width="400">
 
 
-To check how well the fit describes the observation, a set of goodness of fit values is saved in the '''_gof.csv''' file in the results folder. It contains different statistics: 
+To check how well the fit describes the observation, a set of goodness of fit values is saved in the ```_gof.csv``` file in the results folder. It contains different statistics: 
 * The sum of squares due to error (SSE) (values closer to 0 are good)
 * R-square (values closer to 1 are good)
 * Degrees of Freedom (DFE) 
@@ -113,19 +118,17 @@ To check how well the fit describes the observation, a set of goodness of fit va
 These values can be used to select the best fit or filter data.  
 
 
+<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/GOF.png" alt="Table for the GOF statistics" width="400">
 
 For further analysis and averaging of different experiments, the normalized values for the FRAP curve, and the tau value and percent of the immobile and mobile fractions are saved to the file ```_pyan.txt```.  The data structure is as follows: the first value is the tau-value, then the mobile fraction and the immobile fraction. From the 4th value on, the normalized FRAP recovery values are listed. 
 
-
+<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/results.png" alt="Table of bleach valuess" width="400">
 
 
 The t-half value is recorded by two different means. Firstly from the fit and the corresponding value is saved as ```_t_half_value_from_fit.txt```. The more direct way is to get the half-time of recovery from the recovery data. A visual representation of this can be found in the image ```_thalf_no_fit.tif``` and the estimated value in ```t_half_value_no_fit.txt```  
 
 
-
-
-
-
+<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_thalf_no_fit.tif" alt="Plot for the estimation of t-half" width="400">
 
 
 
@@ -135,9 +138,9 @@ The t-half value is recorded by two different means. Firstly from the fit and th
 
 
 
-### 4.	RNA-seq  analysis tutorial
+### 4.	RNA-seq  analysis
 
-
+The R script used for RNA-seq analysis can be found [here](https://github.com/ercanlab/2021_Breimann_et_al/tree/main/RNAseq_analysis )
 
 
 
