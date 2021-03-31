@@ -23,7 +23,6 @@ bioRxiv:  ; doi:
 * _**4.	RNA-seq  analysis**_
 
 <br />
-<br />
 
 <div style="text-align: justify">
  
@@ -101,12 +100,12 @@ The following steps are automatically executed and will save the results to the 
 
 For correction acquisition bleaching, the rest of the nucleus is used. The file ```_bleaching_correction.``` shows the detected acquisition bleaching in the nuclear mask region for all post bleach images. The bleaching is fitted and used to correct the background fluorescence as well as the recovery fluorescence. The last timepoint intensity of the pre bleach detection in the bleach point is set to 1 to achieve comparable datasets between different replicates. 
 
-<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_bleaching_correction.tif" alt="Plots for the correction of the acquisition bleaching" width="400">
+<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_bleaching_correction.png" alt="Plots for the correction of the acquisition bleaching" width="600">
 
 
 The fitted and normalized recovery curve is saved as ```_recovery.tif``` to the output folder. It displays the normalized fluorescence in the whole nucleus (red) and the bleach point recovery (black). The immobile and mobile fractions are displayed in the image, and the tau and t-half values from the fit of the curve. The fitting of the curve can only be changed directly in the code (Section 7). 
 
-<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_recovery.tif" alt="Plot for the FRAP recovery" width="400">
+<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_recovery.png" alt="Plot for the FRAP recovery" width="600">
 
 
 To check how well the fit describes the observation, a set of goodness of fit values is saved in the ```_gof.csv``` file in the results folder. It contains different statistics: 
@@ -122,13 +121,13 @@ These values can be used to select the best fit or filter data.
 
 For further analysis and averaging of different experiments, the normalized values for the FRAP curve, and the tau value and percent of the immobile and mobile fractions are saved to the file ```_pyan.txt```.  The data structure is as follows: the first value is the tau-value, then the mobile fraction and the immobile fraction. From the 4th value on, the normalized FRAP recovery values are listed. 
 
-<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/results.png" alt="Table of bleach valuess" width="400">
+<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/results.png" alt="Table of bleach valuess" width="600">
 
 
 The t-half value is recorded by two different means. Firstly from the fit and the corresponding value is saved as ```_t_half_value_from_fit.txt```. The more direct way is to get the half-time of recovery from the recovery data. A visual representation of this can be found in the image ```_thalf_no_fit.tif``` and the estimated value in ```t_half_value_no_fit.txt```  
 
 
-<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_thalf_no_fit.tif" alt="Plot for the estimation of t-half" width="400">
+<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_thalf_no_fit.png" alt="Plot for the estimation of t-half" width="600">
 
 
 
