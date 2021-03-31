@@ -128,7 +128,7 @@ For further analysis and averaging of different experiments, the normalized valu
 The t-half value is recorded by two different means. Firstly from the fit and the corresponding value is saved as ```_t_half_value_from_fit.txt```. The more direct way is to get the half-time of recovery from the recovery data. A visual representation of this can be found in the image ```_thalf_no_fit.tif``` and the estimated value in ```t_half_value_no_fit.txt```  
 
 
-<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_thalf_no_fit.tif" alt="Plot for the estimation of t-half " width="400">
+<img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_thalf_no_fit.tif" alt="Plot for the estimation of t-half" width="400">
 
 
 
