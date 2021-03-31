@@ -20,7 +20,7 @@ bioRxiv:  ; doi:
 * _**1.	Abstract**_
 * _**2.	Requirements FRAP Matlab analysis**_
 * _**3.	FRAP analysis tutorial**_
-* _**4.	RNA-seq  analysis tutorial**_
+* _**4.	RNA-seq  analysis**_
 
 <br />
 <br />
@@ -138,9 +138,9 @@ The t-half value is recorded by two different means. Firstly from the fit and th
 
 
 
-### 4.	RNA-seq  analysis tutorial
+### 4.	RNA-seq  analysis
 
-
+The R script used for RNA-seq analysis can be found [here](https://github.com/ercanlab/2021_Breimann_et_al/tree/main/RNAseq_analysis )
 
 
 
