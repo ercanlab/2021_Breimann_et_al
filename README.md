@@ -18,8 +18,8 @@ bioRxiv:  ; doi:
 
 ### Content
 
-* _**1.	Abstract **_
-* _**2.	Installation of FRAP Matlab analysis **_
+* _**1.	Abstract**_
+* _**2.	Installation of FRAP Matlab analysis**_
 * _**3.	FRAP analysis tutorial**_
 * _**4.	RNA-seq  analysis tutorial**_
 
