@@ -18,7 +18,7 @@ bioRxiv:  ; doi:
 ### Content
 
 * _**1.	Abstract**_
-* _**2.	Installation of FRAP Matlab analysis**_
+* _**2.	Requirements FRAP Matlab analysis**_
 * _**3.	FRAP analysis tutorial**_
 * _**4.	RNA-seq  analysis tutorial**_
 
@@ -35,7 +35,7 @@ Condensin is a multi-subunit SMC complex that binds to and compacts chromosomes.
 <br />
 <br />
 
-### 2.	Installation of FRAP Matlab analysis
+### 2.	Requirements for FRAP Matlab analysis
 
 The analysis script was developed and tested in Matlab R2018a on Mac OS 10.15.7.
 
@@ -64,11 +64,69 @@ FRAP protocol:
 
 Test dataset: 
 
-Step 1: 
+_**Step 1: Select the data for analysis**_
 
-Select your data input directory and output directory
+The first step after running the script is to select the input folder with the raw FRAP images and an output folder for the analysis files. A window will pop up, and you can navigate to the respective folders (first input, then output). 
 
-Step 2:
+```Choose data_tif directory```
+```Choose matlab_results directory``` 
+
+Next, you need to select the FRAP dataset you want to analyze. The Leica SP8 creates two image stacks per FRAP experiment, one before the bleach point and one after the breakpoint. First, select the dataset before the bleach and then click on the post bleach image stack. 
+
+```Load pre-stack```
+```Load post-stack ```
+
+_**Step 2: Manually outline the cell nucleus**_
+
+To select only one nucleus for FRAP analysis, you can draw a ROI. For that, a window will open with a filtered post bleach image (mean of the first three images) and just start outlining the nucleus by clicking in the image. Once you are satisfied with the outline, double click in the middle of the selected ROI to accept it. 
+
+
+
+_**Step 3: Automatically detect the bleach point**_
+
+The next step automatically detects the bleach-point by subtracting the mean of the first couple post bleach image from the mean of the last pre bleach images. A window will appear with the Pre bleach and Post bleach images and the difference between the two images. The lower row depicts the selected mask from the previous step (thresholded) and the mask for the bleach point based on Fdiff above. 
+
+At this point, there is the option to change the threshold for the bleach point selection. Simply press ```No``` in the second window and write a value between ```0-1``` in the ```command Window``` (the starting point is 0.6), and press enter. If you are happy with the bleachpoint detection, press ```Yes```. The displayed overview image is saved as ```_mask.tif``` to the previously selected output folder. 
+
+
+
+
+_**Step 4: Inspect the results**_
+
+The following steps are automatically executed and will save the results to the previously selected output folder. 
+
+For correction acquisition bleaching, the rest of the nucleus is used. The file ```_bleaching_correction.``` shows the detected acquisition bleaching in the nuclear mask region for all post bleach images. The bleaching is fitted and used to correct the background fluorescence as well as the recovery fluorescence. The last timepoint intensity of the pre bleach detection in the bleach point is set to 1 to achieve comparable datasets between different replicates. 
+
+
+
+
+The fitted and normalized recovery curve is saved as ```_recovery.tif``` to the output folder. It displays the normalized fluorescence in the whole nucleus (red) and the bleach point recovery (black). The immobile and mobile fractions are displayed in the image, and the tau and t-half values from the fit of the curve. The fitting of the curve can only be changed directly in the code (Section 7). 
+
+
+
+To check how well the fit describes the observation, a set of goodness of fit values is saved in the '''_gof.csv''' file in the results folder. It contains different statistics: 
+* The sum of squares due to error (SSE) (values closer to 0 are good)
+* R-square (values closer to 1 are good)
+* Degrees of Freedom (DFE) 
+* Adjusted R-square (values closer to 1 are good)
+* Root mean squared error (RMSE) (values closer to 0 are good)
+These values can be used to select the best fit or filter data.  
+
+
+
+For further analysis and averaging of different experiments, the normalized values for the FRAP curve, and the tau value and percent of the immobile and mobile fractions are saved to the file ```_pyan.txt```.  The data structure is as follows: the first value is the tau-value, then the mobile fraction and the immobile fraction. From the 4th value on, the normalized FRAP recovery values are listed. 
+
+
+
+
+The t-half value is recorded by two different means. Firstly from the fit and the corresponding value is saved as ```_t_half_value_from_fit.txt```. The more direct way is to get the half-time of recovery from the recovery data. A visual representation of this can be found in the image ```_thalf_no_fit.tif``` and the estimated value in ```t_half_value_no_fit.txt```  
+
+
+
+
+
+
+
 
 
 
