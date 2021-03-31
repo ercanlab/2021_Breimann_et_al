@@ -43,12 +43,21 @@ Condensin is a multi-subunit SMC complex that binds to and compacts chromosomes.
 
 ### 2.	Installation of FRAP Matlab analysis
 
-The analysis script was developed and tested in Matlab R2017b on Mac OS 10.15.7.
+The analysis script was developed and tested in Matlab R2018a on Mac OS 10.15.7.
 
-The following toolboxes are required: 
+The following Matlab toolboxes are required to run “FRAP_analysis.m”: 
+* curve_fitting_toolbox
+* image_toolbox
 
 
+The following scripts have to be in the same folder as “FRAP_analysis.m”
 
+* tiffread2.m (by Francois Nedelec)
+* struct2.csv.m (by James Slegers)
+* matVIS.m (by S. Junek)
+* dftregistration.m (by Manuel Guizar-Sicairos, Samuel T. Thurman, and James R. Fienup)
+* timesteps.m
+* timestepsArray.m 
 
 
 <br />
@@ -64,7 +73,11 @@ FRAP protocol:
 
 Test dataset: 
 
+Step 1: 
 
+Select your data input directory and output directory
+
+Step 2:
 
 
 
@@ -75,7 +88,7 @@ Test dataset:
 <br />
 <br />
 
-### 4.	RNA-seq  analysis tutoria
+### 4.	RNA-seq  analysis tutorial
 
 
 
