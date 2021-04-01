@@ -114,6 +114,7 @@ To check how well the fit describes the observation, a set of goodness of fit va
 * Degrees of Freedom (DFE) 
 * Adjusted R-square (values closer to 1 are good)
 * Root mean squared error (RMSE) (values closer to 0 are good)
+
 These values can be used to select the best fit or filter data.  
 
 
