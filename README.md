@@ -98,7 +98,7 @@ _**Step 4: Inspect the results**_
 
 The following steps are automatically executed and will save the results to the previously selected output folder. 
 
-For correction acquisition bleaching, the rest of the nucleus is used. The file ```_bleaching_correction.``` shows the detected acquisition bleaching in the nuclear mask region for all post bleach images. The bleaching is fitted and used to correct the background fluorescence as well as the recovery fluorescence. The last timepoint intensity of the pre bleach detection in the bleach point is set to 1 to achieve comparable datasets between different replicates. 
+For correction of the acquisition bleaching, the rest of the nucleus is used. The file ```_bleaching_correction.``` shows the detected acquisition bleaching in the nuclear mask region for all post bleach images. The bleaching is fitted and used to correct the background fluorescence as well as the recovery fluorescence. The last timepoint intensity of the pre bleach detection in the bleach point is set to 1 to achieve comparable datasets between different replicates. 
 
 <img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_bleaching_correction.png" alt="Plots for the correction of the acquisition bleaching" width="600">
 
