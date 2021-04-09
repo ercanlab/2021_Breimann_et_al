@@ -4,8 +4,7 @@
 
 </div>
 
-_**Dynamic of condensin DC binding is regulated by a noncatalytic activity of the H4K20
-demethylase DPY-21**_
+_**A noncatalytic activity of the H4K20 demethylase DPY-21 regulates condensin DC binding**_
 
  
 Laura Breimann *, Ana Karina Morao *, Jun Kim, David Sebastian Jimenez, Nina Maryn, Krishna Bikkasani, Michael J Carrozza, Sarah E Albritton, Maxwell Kramer, Lena Annika Street, Kustrim Cerimi, Vic-Fabienne Schumann, Ella Bahry, Stephan Preibisch, Andrew Woehler, Sevinç Ercan 
@@ -20,7 +19,9 @@ bioRxiv:  ; doi:
 * _**1.	Abstract**_
 * _**2.	Requirements FRAP Matlab analysis**_
 * _**3.	FRAP analysis tutorial**_
-* _**4.	RNA-seq  analysis**_
+* _**4.	Image intensity  analysis**_
+* _**5.	Worm size  analysis**_
+* _**6.	RNA-seq  analysis**_
 
 <br />
 
@@ -28,7 +29,7 @@ bioRxiv:  ; doi:
  
 ### 1.	Abstract 
 
- 
+Condensin is a multi-subunit SMC complex that binds to and compacts chromosomes. Unlike cohesin, in vivo regulators of condensin binding dynamics remain unclear. Here we addressed this question using *C. elegans* condensin DC, which specifically binds to and represses transcription of both X chromosomes in hermaphrodites for dosage compensation.  Mutants of several chromatin modifiers that regulate H4K20me and H4K16ac cause varying degrees of X chromosome derepression. We used fluorescence recovery after photobleaching (FRAP) to analyze how these modifiers regulate condensin DC binding dynamics *in vivo*. We established FRAP using the SMC4 homolog DPY-27 and showed that a well-characterized ATPase mutation abolishes its binding. The greatest effect on condensin DC dynamics was in a null mutant of the H4K20me2 demethylase DPY-21, where the mobile fraction of the complex reduced from ~30% to 10%. In contrast, a catalytic mutant of *dpy-21* did not regulate condensin DC mobility. Separation of catalytic and non-catalytic activity is also supported by Hi-C data in the *dpy-21* null mutant. Together, our results indicate that DPY-21 has a non-catalytic role in regulating the dynamics of condensin DC binding, which is important for transcription repression.  
 
 <br />
 <br />
@@ -130,14 +131,31 @@ The t-half value is recorded by two different means. Firstly from the fit and th
 <img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_thalf_no_fit.png" alt="Plot for the estimation of t-half" width="600">
 
 
+_**Step 5: Plotting results and comparing datasets**_
 
+Example scripts for plotting FRAP curves for different datasets using Python can be found [here](https://github.com/ercanlab/2021_Breimann_et_al/tree/main/FRAP_analysis/Plotting_scripts )
 
 <br />
 <br />
 
+### 4.	Image intensity  analysis
 
 
-### 4.	RNA-seq  analysis
+The Python script used for Image intensity analysis can be found [here](https://github.com/ercanlab/2021_Breimann_et_al/tree/main/Image_intensity_analysis )
+<br />
+<br />
+
+
+### 5.	Worm size  analysis
+
+
+The Python script used for worm size analysis can be found [here](https://github.com/ercanlab/2021_Breimann_et_al/tree/main/WormSize_analysis )
+<br />
+<br />
+
+
+### 6.	RNA-seq  analysis
+
 
 The R script used for RNA-seq analysis can be found [here](https://github.com/ercanlab/2021_Breimann_et_al/tree/main/RNAseq_analysis )
 
