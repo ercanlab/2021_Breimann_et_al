@@ -27,8 +27,7 @@ bioRxiv:  ; doi:
 <div style="text-align: justify">
  
 ### 1.	Abstract 
-Abstract:
-Condensin is a multi-subunit SMC complex that binds to and compacts chromosomes. Unlike cohesin, in vivo regulators of condensin binding dynamics remain unclear. Here we addressed this question using C. elegans condensin DC, which specifically binds to and represses transcription of both X chromosomes in hermaphrodites for dosage compensation.  Mutants of several chromatin modifiers that regulate H4K20me and H4K16ac cause varying degrees of X chromosome derepression. We used fluorescence recovery after photobleaching (FRAP) to analyze how these modifiers regulate condensin DC binding dynamics in vivo. We established FRAP using the SMC4 homolog DPY-27 and showed that a well-characterized ATPase mutation abolishes its binding. The greatest effect on condensin DC dynamics was in a null mutant of the H4K20me2 demethylase DPY-21, where the mobile fraction of the complex reduced from ~30% to 10%. Supporting a structural role for DPY-21, a catalytic mutant of dpy-21 did not regulate condensin DC mobility. Intriguingly, unlike FRAP, ChIP-seq and Hi-C detected little change in condensin DC binding and 3D DNA contacts in the dpy-21 null mutant. Together, our results suggest that DPY-21 has a non-catalytic role in regulating the dynamics of condensin DC binding, which is important for its function in transcription repression.
+
  
 
 <br />
@@ -98,7 +97,7 @@ _**Step 4: Inspect the results**_
 
 The following steps are automatically executed and will save the results to the previously selected output folder. 
 
-For correction acquisition bleaching, the rest of the nucleus is used. The file ```_bleaching_correction.``` shows the detected acquisition bleaching in the nuclear mask region for all post bleach images. The bleaching is fitted and used to correct the background fluorescence as well as the recovery fluorescence. The last timepoint intensity of the pre bleach detection in the bleach point is set to 1 to achieve comparable datasets between different replicates. 
+For correction of the acquisition bleaching, the rest of the nucleus is used. The file ```_bleaching_correction.``` shows the detected acquisition bleaching in the nuclear mask region for all post bleach images. The bleaching is fitted and used to correct the background fluorescence as well as the recovery fluorescence. The last timepoint intensity of the pre bleach detection in the bleach point is set to 1 to achieve comparable datasets between different replicates. 
 
 <img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_bleaching_correction.png" alt="Plots for the correction of the acquisition bleaching" width="600">
 
