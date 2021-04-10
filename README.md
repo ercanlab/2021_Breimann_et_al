@@ -103,7 +103,7 @@ The file ```_bleaching_correction.tiff``` shows the correction for the acquisiti
 
 <img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_bleaching_correction.png" alt="Plots for the correction of the acquisition bleaching" width="600">
 
-The fitted and normalized recovery curve is saved as ```_recovery.tif``` to the output folder. It displays the normalized fluorescence in the whole nucleus (red) and the bleach point recovery (black) fitted with a monoexponential function with nonlinear least-squares-based fitting. The immobile (fim) and mobile fractions (fmo) are displayed in the image. The recovery time constant (𝜏) and t-half (t0.5) values from the fit of the curve. The fitting of the curve can only be changed directly in the MATLAB script (Section 7).
+The fitted and normalized recovery curve is saved as ```_recovery.tif``` to the output folder. The graph displays the normalized fluorescence in the whole nucleus (red) and the bleach point recovery (black) fitted with a monoexponential function with nonlinear least-squares-based fitting. The immobile (fim) and mobile fractions (fmo) are displayed in the image. The recovery time constant (𝜏) and t-half (t0.5) values from the fit of the curve. The fitting of the curve can only be changed directly in the MATLAB script (Section 7).
 
 
 <img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_recovery.png" alt="Plot for the FRAP recovery" width="600">
