@@ -85,7 +85,7 @@ To select only one nucleus for FRAP analysis, you can draw a **ROI**. For that, 
 
 _**Step 3: Automatically detect the bleach point**_
 
-The next step automatically detects the bleach point by automated thresholding (Otsu’s Method) of an image of the difference of the mean pre-bleach images and the mean of the first five post-bleach images. A window will appear with the pre-bleach (F_pre) and post-bleach (F_post) images and the difference between the two images (F_diff). The lower row depicts the selected mask (mask_nuc) from the previous step (thresholded) and the mask for the bleach point (mask_bl) based on F_diff above.. 
+The next step automatically detects the bleach point by automated thresholding (Otsu’s Method) of an image of the difference of the mean pre-bleach images and the mean of the first five post-bleach images. A window will appear with the pre-bleach (F_pre) and post-bleach (F_post) images and the difference between the two images (F_diff). The lower row depicts the selected mask (mask_nuc) from the previous step (thresholded) and the mask for the bleach point (mask_bl) based on F_diff above.
 
 At this point, there is the option to change the threshold for the bleach point selection. Simply press ```No``` in the second window and write a value between ```0-1``` in the ```Command Window``` (the starting point is 0.6), and press enter. If you are happy with the bleachpoint detection, press ```Yes```. The displayed overview image is saved as ```_mask.tif``` to the previously selected output folder. 
 
@@ -103,7 +103,7 @@ The file ```_bleaching_correction.tiff``` shows the correction for the acquisiti
 
 <img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_bleaching_correction.png" alt="Plots for the correction of the acquisition bleaching" width="600">
 
-The fitted and normalized recovery curve is saved as ```_recovery.tif``` to the output folder. The graph displays the normalized fluorescence in the whole nucleus (red) and the bleach point recovery (black) fitted with a monoexponential function with nonlinear least-squares-based fitting. The immobile (fim) and mobile fractions (fmo) are displayed in the image. The recovery time constant (𝜏) and t-half (t0.5) values from the fit of the curve. The fitting of the curve can only be changed directly in the MATLAB script (Section 7).
+The fitted and normalized recovery curve is saved as ```_recovery.tif``` to the output folder. The graph displays the normalized fluorescence in the whole nucleus (red) and the bleach point recovery (black) fitted with a monoexponential function with nonlinear least-squares-based fitting. The immobile (fim) and mobile fractions (fmo) are displayed in the image. The recovery time constant (𝜏) and t-half (t_0.5) values from the fit of the curve. The fitting of the curve can only be changed directly in the MATLAB script (Section 7).
 
 
 <img src="https://github.com/ercanlab/2021_Breimann_et_al/blob/main/FRAP_analysis/Screenshots/DPY-27_recovery.png" alt="Plot for the FRAP recovery" width="600">
