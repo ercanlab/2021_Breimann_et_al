@@ -59,7 +59,7 @@ The following scripts have to be in the same folder as “FRAP_analysis.m”
 
 ### 3.	FRAP analsysis tutorial
 
-FRAP protocol: 
+FRAP protocol: The extended experimental protocol can be found [here](https://dx.doi.org/10.17504/protocols.io.bpkymkxw )  
 
 A FRAP dataset of a _C. elegans_ intestine nuclei can be found [here](https://github.com/ercanlab/2021_Breimann_et_al/tree/main/FRAP_analysis/Example_datasets )
 
