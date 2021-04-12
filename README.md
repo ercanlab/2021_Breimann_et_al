@@ -9,7 +9,7 @@ _**A noncatalytic activity of the H4K20 demethylase DPY-21 regulates condensin D
  
 Laura Breimann *, Ana Karina Morao *, Jun Kim, David Sebastian Jimenez, Nina Maryn, Krishna Bikkasani, Michael J Carrozza, Sarah E Albritton, Maxwell Kramer, Lena Annika Street, Kustrim Cerimi, Vic-Fabienne Schumann, Ella Bahry, Stephan Preibisch, Andrew Woehler, Sevinç Ercan 
 
-bioRxiv: https://www.biorxiv.org/content/10.1101/2021.04.11.438056v1    ; doi: https://doi.org/10.1101/2021.04.11.438056
+bioRxiv: https://www.biorxiv.org/content/10.1101/2021.04.11.438056v1; doi: https://doi.org/10.1101/2021.04.11.438056
 
 \* equal contribution  
 
