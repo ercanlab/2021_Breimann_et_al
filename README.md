@@ -70,7 +70,7 @@ The first step after running the script is to select the input folder with the r
 ```Choose data_tif directory```
 ```Choose matlab_results directory``` 
 
-Next, you need to select the FRAP dataset you want to analyze. The Leica SP8 creates two image stacks per FRAP experiment, one before the bleach point and one after the breakpoint. First, select the dataset before the bleach and then click on the post-bleach image stack. 
+Next, you need to select the FRAP dataset you want to analyze. The Leica SP8 creates two image stacks per FRAP experiment, one before the bleach point and one after the bleach point. First, select the dataset before the bleach and then click on the post-bleach image stack. 
 
 ```Load pre-stack```
 ```Load post-stack ```
