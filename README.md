@@ -85,7 +85,7 @@ To select only one nucleus for FRAP analysis, you can draw a **ROI**. For that, 
 
 _**Step 3: Automatically detect the bleach point**_
 
-The next step automatically detects the bleach point by automated thresholding (Otsu’s Method) of an image of the difference of the mean pre-bleach images and the mean of the first five post-bleach images. A window will appear with the pre-bleach (F_pre) and post-bleach (F_post) images and the difference between the two images (F_diff). The lower row depicts the selected mask (mask_nuc) from the previous step (thresholded) and the mask for the bleach point (mask_bl) based on F_diff above.
+The next step automatically detects the bleach point by automated thresholding (Otsu’s Method) of an image of the difference of the mean pre-bleach images and the mean of the first five post-bleach images. A window will appear with the pre-bleach (F<sub>pre</sub>) and post-bleach (F<sub>post</sub>) images and the difference between the two images (F<sub>diff</sub>). The lower row depicts the selected mask (mask<sub>nuc</sub>) from the previous step (thresholded) and the mask for the bleach point (mask<sub>bl</sub>) based on F<sub>diff</sub> above.
 
 At this point, there is the option to change the threshold for the bleach point selection. Simply press ```No``` in the second window and write a value between ```0-1``` in the ```Command Window``` (the starting point is 0.6), and press enter. If you are happy with the bleachpoint detection, press ```Yes```. The displayed overview image is saved as ```_mask.tif``` to the previously selected output folder. 
 
